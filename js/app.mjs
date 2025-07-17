@@ -1,6 +1,6 @@
 import { getMondayOfWeek, formatDateComplete } from './utils.mjs';
-import { isHoliday } from './holidays.js';
-import { saveWeek, loadWeek, getLastOffset, setLastOffset } from './storage.js';
+import { isHoliday } from './holidays.mjs';
+import { saveWeek, loadWeek, getLastOffset, setLastOffset } from './storage.mjs';
 
 const translations = {
   fr: {
