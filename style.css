@@ -1,0 +1,81 @@
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --accent: #0077cc;
+  --error: #cc0000;
+  --border: #ddd;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --fg: #f0f0f0;
+  --border: #444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+#controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.day {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.day h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.checkboxes label {
+  margin-right: 1rem;
+}
+
+.total {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
