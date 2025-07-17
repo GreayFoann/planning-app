@@ -1,4 +1,4 @@
-import { getMondayOfWeek, formatDateComplete } from './utils.js';
+import { getMondayOfWeek, formatDateComplete } from './utils.mjs';
 import { isHoliday } from './holidays.js';
 import { saveWeek, loadWeek, getLastOffset, setLastOffset } from './storage.js';
 
