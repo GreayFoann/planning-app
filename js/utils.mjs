@@ -6,7 +6,7 @@ export function getMondayOfWeek(weekOffset = 0) {
   return new Date(d.setDate(diff));
 }
 
-export function formatDateComplete(date) {
+export function formatDateComplete(date, lang = 'fr') {
   return date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
     weekday: 'long',
     day: '2-digit',
