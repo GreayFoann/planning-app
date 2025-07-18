@@ -8,12 +8,14 @@
 </head>
 <body>
   <header>
-    <h1>Planning Hebdomadaire</h1>
-    <button id="toggleTheme" aria-label="Changer le mode">🌙</button>
-    <select id="langSelect" aria-label="Langue">
-      <option value="fr">Français</option>
-      <option value="en">English</option>
-    </select>
+    <h1 id="title">Planning Hebdomadaire</h1>
+    <div>
+      <button id="toggleTheme" aria-label="Changer le mode">🌙</button>
+      <select id="langSelect" aria-label="Langue">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
   </header>
 
   <main>
@@ -27,19 +29,17 @@
     <section id="planning" aria-live="polite"></section>
 
     <section id="summary">
-      <p>Total effectué : <strong id="totalEffectue">0h00min</strong></p>
-      <p>Reste à faire : <strong id="reste">35h00min</strong></p>
+      <p><span id="totalDoneLabel">Total effectué :</span> <strong id="totalEffectue">0h00min</strong></p>
+      <p><span id="remainingLabel">Reste à faire :</span> <strong id="reste">35h00min</strong></p>
     </section>
 
     <section id="actions">
       <button id="saveBtn">💾 Sauvegarder</button>
       <button id="resetBtn">↩️ Annuler</button>
       <button id="exportCSV">📊 Export CSV</button>
-      <button id="exportPDF">🖨️ Imprimer / PDF</button>
-      <input type="file" id="importCSV" accept=".csv" aria-label="Importer CSV"/>
     </section>
   </main>
 
-  <script type="module" src="js/app.mjs"></script>
+  <script type="module" src="app.mjs"></script>
 </body>
 </html>
