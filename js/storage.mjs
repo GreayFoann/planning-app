@@ -20,6 +20,10 @@ export function getLastOffset() {
   return val !== null ? parseInt(val, 10) : 0;
 }
 
+export function setLastOffset(offset) {
+  localStorage.setItem(OFFSET_KEY, offset.toString());
+}
+
 function getWeekOffset(monday) {
   const now = new Date();
   const mondayNow = new Date(now);
