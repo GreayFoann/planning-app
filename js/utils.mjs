@@ -14,3 +14,15 @@ export function formatDateComplete(date, lang = 'fr') {
     year: 'numeric'
   });
 }
+
+export function parseTime(str) {
+  const [h, m] = str.split(':').map(n => parseInt(n, 10));
+  return isNaN(h) || isNaN(m) ? null : h * 60 + m;
+}
+
+export function formatDuration(minutes) {
+  if (isNaN(minutes)) return '0h00min';
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return `${h}h${m.toString().padStart(2, '0')}min`;
+}
