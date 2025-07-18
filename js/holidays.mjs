@@ -1,4 +1,3 @@
-// Jours fériés France métropolitaine
 export function isHoliday(date) {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -16,7 +15,7 @@ export function isHoliday(date) {
     addDays(easter, 50)
   ];
 
-  return holidays.some(h => h.getTime() === date.getTime());
+  return holidays.some(h => h.toDateString() === date.toDateString());
 }
 
 function getEasterDate(year) {
